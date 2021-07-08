@@ -49,12 +49,12 @@ class Conv2dCellUp(nn.Module):
         return x
 
 
-class FaceVAE(nn.Module):
+class MriVAE(nn.Module):
     def __init__(
         self, img_size=128, nf=32, zdim=256, steps=5, colors=3, act="elu", vy=1e-3
     ):
 
-        super(FaceVAE, self).__init__()
+        super(MriVAE, self).__init__()
 
         # store useful stuff
         self.red_img_size = img_size // (2 ** steps)
