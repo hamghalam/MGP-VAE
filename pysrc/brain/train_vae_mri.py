@@ -7,7 +7,7 @@ from torch import nn, optim
 import torch.nn.functional as F
 from torch.autograd import Variable
 from torch.utils.data import DataLoader
-from vae import FaceVAE
+from vae import MriVAE
 import h5py
 import scipy as sp
 import os
@@ -16,7 +16,7 @@ import logging
 import pylab as pl
 from utils import smartSum, smartAppendDict, smartAppend, export_scripts
 from callbacks import callback
-from data_parser import read_face_data, FaceDataset
+from data_parser import read_mri_data, MriDataset
 from optparse import OptionParser
 import logging
 import pickle
