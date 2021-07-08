@@ -15,7 +15,7 @@ data_dir =  '/data/home/mohammad/crop_MRI_convert_to_JPG/2Dimage/'
 def main():
 
     # 1. download and unzip data
-    #download_data(data_dir)
+    
 
     # 2. load data
     RV = import_data()
@@ -31,28 +31,9 @@ def main():
     fout.close()
 
 
-def unzip_data():
-
-    if not os.path.exists(data_dir):
-        os.makedirs(data_dir)
-
-    fnames = [
-        "asian.zip",
-        "africanamerican.zip",
-        "caucasian.zip",
-        "hispanic.zip",
-        "multiracial.zip",
-    ]
-
-    for fname in fnames:
-        print(".. unzipping")
-        unzip(os.path.join(data_dir, fname), data_dir)
-
-
 def import_data(size=128):
 
     files = []
-    #orients = ["00F", "30L", "30R", "45L", "45R", "60L", "60R", "90L", "90R"]
     orients = ["flair", "t1", "t1ce", "t2"]
     for orient in orients:
         _files = glob.glob(os.path.join(data_dir, "*_%s.jpg" % orient))
