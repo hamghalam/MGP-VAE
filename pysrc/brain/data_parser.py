@@ -20,7 +20,7 @@ from torch.utils.data import Dataset
 import torch
 
 
-class FaceDataset(Dataset):
+class MriDataset(Dataset):
     def __init__(self, Y, D, W):
         self.len = Y.shape[0]
         self.Y, self.D, self.W = Y, D, W
