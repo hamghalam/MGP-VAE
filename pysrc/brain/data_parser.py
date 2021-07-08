@@ -32,7 +32,7 @@ class MriDataset(Dataset):
         return self.len
 
 
-def read_face_data(h5fn):
+def read_mri_data(h5fn):
 
     f = h5py.File(h5fn, "r")
     keys = ["test", "train", "val"]
